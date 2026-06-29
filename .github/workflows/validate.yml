@@ -1,0 +1,32 @@
+name: validate-corpus
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pandas
+
+      - name: Validate corpus
+        run: python scripts/validate.py
+
+      - name: Recompute counts
+        run: python scripts/counts.py
+
+      - name: Fail if counts.json is stale
+        run: |
+          if ! git diff --quiet -- counts.json; then
+            echo "::error::counts.json устарел. Запусти 'python scripts/counts.py' и закоммить."
+            git --no-pager diff -- counts.json
+            exit 1
+          fi

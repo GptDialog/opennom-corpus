@@ -1,0 +1,21 @@
+{
+  "total_entries": 3,
+  "verified_entries": 0,
+  "published_entries": 0,
+  "by_status": {
+    "draft": 3,
+    "translated": 0,
+    "verified": 0,
+    "published": 0
+  },
+  "by_theme": {
+    "family": {
+      "total": 3,
+      "draft": 3,
+      "translated": 0,
+      "verified": 0,
+      "published": 0
+    }
+  },
+  "audio_count": 0
+}

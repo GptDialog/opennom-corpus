@@ -1,0 +1,4 @@
+id,bur,rus,literal_rus,eng,type,register,dialect,source,usage_note,theme,lesson,level,order,audio_id,translator,verified_by,status,date_added,notes
+fam-0001,‹бур: заполнит носитель›,мать,,mother,word,neutral,khori,,Базовый термин родства по материнской линии,family,family-01,A1,1,,,,draft,2026-06-29,PLACEHOLDER — бурятское поле заполняет носитель; не выдумано ИИ
+fam-0002,‹бур: заполнит носитель›,отец,,father,word,neutral,khori,,Базовый термин родства по отцовской линии,family,family-01,A1,2,,,,draft,2026-06-29,PLACEHOLDER — бурятское поле заполняет носитель; не выдумано ИИ
+fam-0003,‹бур: заполнит носитель›,Это моя семья,,This is my family,sentence,neutral,khori,,Учебная фраза-связка для урока о семье,family,family-01,A1,3,,,,draft,2026-06-29,PLACEHOLDER — бурятское поле заполняет носитель; не выдумано ИИ
