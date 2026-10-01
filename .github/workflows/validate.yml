@@ -1,8 +1,19 @@
 name: validate-corpus
 
+# Проверка идёт один раз, на PR. Раньше push на любую ветку плюс pull_request
+# давали по два прогона на каждый коммит PR и третий после мержа. main защищён
+# ruleset'ом: мерж только из PR с зелёной обязательной проверкой и свежей
+# веткой (01.10.2026, решение владельца).
 on:
-  push:
   pull_request:
+
+permissions:
+  contents: read
+
+# Новый коммит в PR останавливает прошлый прогон этого же PR.
+concurrency:
+  group: validate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
   validate:
